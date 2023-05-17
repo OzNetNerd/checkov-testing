@@ -8,6 +8,7 @@ components:
       type: http
       scheme: basic
 
+
 paths:
   "/":
     get:
