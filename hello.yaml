@@ -1,3 +1,4 @@
+
 openapi: 3.0.0
 info:
   title: test
@@ -7,6 +8,7 @@ components:
     unencryptedScheme:
       type: http
       scheme: basic
+
 paths:
   "/":
     get:
