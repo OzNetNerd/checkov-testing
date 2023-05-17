@@ -1,0 +1,17 @@
+name: Prisma Cloud code scan
+run-name: Checking latest push from ${{ github.actor }} 
+on: [push]
+jobs:
+  Prisma-Cloud-Code-Scan:
+    runs-on: ubuntu-latest
+    steps:
+          - name: Checkout repo
+            uses: actions/checkout@v2
+
+          - name: Run Prisma Cloud 
+            id: Prisma Cloud
+            uses: bridgecrewio/checkov-action@master 
+            env:
+              PRISMA_API_URL: https://api.jp.prismacloud.io
+            with:
+              api-key: ${{ secrets.BC_API_KEY }}
