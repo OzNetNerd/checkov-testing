@@ -8,8 +8,8 @@ jobs:
           - name: Checkout repo
             uses: actions/checkout@v2
 
-          - name: Run Prisma Cloud 
-            id: Prisma Cloud
+          - name: Run Prisma Cloud code scan
+            id: Prisma-Cloud-Code-Scan
             uses: bridgecrewio/checkov-action@master 
             env:
               PRISMA_API_URL: https://api.jp.prismacloud.io
